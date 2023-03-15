@@ -9,7 +9,8 @@
     <meta content="" description="">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-   
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-mLUjOgI+OeYhhVYZo+zpKjX9i/dPY1jK/NhHtM+glxSt/zr5vfmJ5Y5+87ZY5lzrsX1jnJvC8CD7WwDRclEtw==" crossorigin="anonymous" />
+
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -31,12 +32,37 @@
            <div class="btnField">
           <button type="submit" class="Btn btn btn-primary btn-block mb-4" id="loginBtn">Login</button>
         <!-- sign up button -->
-          <button type="submit" class="Btn btn btn-primary btn-block mb-4" id="signBtn">Sign Up</button>
+          <button type="button" class="Btn btn btn-primary btn-block mb-4" id="signBtn" data-toggle="modal" data-target="#exampleModalCenter">Sign Up</button>
           </div>
         </div>
-    
-     
     </form>
+    <div class="modal" id="exampleModalCenter" tabindex="2" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Sign In</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"><i class="fas fa-times"></i></span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="signinForm">
+              <div class="form-outline mb-4">
+                <input type="text" id="form2Example3" class="form-control" placeholder="Enter Name" required/>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="email" id="form2Example5" class="form-control" placeholder="Enter Email" required />
+              </div>
+              <div class="form-outline mb-3">
+                <input type="password" id="form2Example6" class="form-control" placeholder="Enter Password" required/>
+              </div>
+                  <div class="btnField">
+                  <button type="submit" class="Btn btn btn-primary btn-block mb-4" id="signBtn">Sign In</button>
+                  </div>
+          </div>
+        </div>
+      </div>
+    </div>
      </div>
     <script src="jquery-3.6.0.min.js">
     </script>

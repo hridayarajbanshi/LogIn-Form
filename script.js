@@ -1,8 +1,6 @@
-const mainTitle = document.getElementById("main-title");
 const logBtn = document.getElementById("loginBtn").addEventListener("submit", function(e){
-  mainTitle.innerText = "Login";
   //form ma timro php ko data haru halnu 
-  fetch('submit-form.php', {
+  fetch('', {
     method: 'POST',
     body: formData
   })
@@ -19,13 +17,28 @@ const logBtn = document.getElementById("loginBtn").addEventListener("submit", fu
     alert('There was a problem submitting the form.');
   });
 });
-const signBtn = document.getElementById("signBtn").addEventListener("submit", function(){
-  mainTitle.innerText = "Sign up";
-});
 const loginForm = document.getElementById("loginForm").addEventListener('submit',function(e){
   e.preventDefault();
   let email = document.getElementById("form1Example1").value;
-  let pwd = document.getElementById("form2Example2").value;
-  
+  let pwd = document.getElementById("form2Example2").value; 
+})
+//sign up section 
+let signUp = document.getElementById("signinForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  let formData2 = new FormData(document.getElementById('signinForm'));
 
+  fetch('', {
+    method: 'POST',
+    body: formData2
+  }).then(res=>{
+    if(res.status == 200){
+      console.log("You're a member");
+      document.getElementById("signinForm").reset();
+    }else{
+      alert("there is a problem");
+    }
+  })
+  .catch(error => {
+    console.log("Error: ", error);
+  })
 })

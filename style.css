@@ -23,6 +23,7 @@ body{
   font-family: 'Rubik', sans-serif;
   font-weight: bold;
   text-align: center;
+  color: green;
   text-transform: uppercase;
 }
 
@@ -78,6 +79,32 @@ body{
   background-color: white;
   color: green;
   box-shadow: none; 
+}
+.modal-backdrop{
+  height: 0px;
+}
+.modal-content{
+  border-radius: 20px;
+background-image: url("./imgs/pexels-oleksandr-tiupa-192136.jpg");
+background-position: center;
+background-size: cover;
+box-shadow: 0px 0px 15px black;
+}
+.modal-title{
+font-family: 'Rubik', sans-serif;
+color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 30px;
+}
+.close{
+  margin-right: 20px;
+  border: none;
+  background: transparent;
+}
+.fa-times{
+  color: white;
+  font-size: 25px;
 }
 @media all and (max-width: 550px) {
   body{
